@@ -49,9 +49,12 @@ body {
     font-size: 0.85rem;
     font-weight: 600;
     transition: 0.3s;
+    text-decoration: none; /* Added for link */
+    color: white; /* Added for link */
+    display: block;
 }
 
-.s-tag:hover { border-color: orange; background: #111; }
+.s-tag:hover { border-color: orange; background: #111; color: orange; }
 .s-tag span { color: orange; margin-left: 5px; font-weight: 800; }
 
 /* MAINTENANCE GRID */
@@ -72,6 +75,8 @@ body {
     margin-bottom: 30px;
 }
 
+.m-link { text-decoration: none; color: inherit; display: block; } /* Wrapper for cards */
+
 .m-card {
     background: #0a0a0a;
     border: 1px solid #222;
@@ -79,10 +84,11 @@ body {
     padding: 35px;
     transition: 0.4s ease;
     position: relative;
+    height: 100%;
 }
 
 /* Highlight Advanced (Best Seller) */
-.m-card:nth-child(2) {
+.m-link:nth-child(2) .m-card {
     border: 2px solid orange;
     transform: scale(1.03);
     background: #0d0d0d;
@@ -153,7 +159,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .m-card:nth-child(2) { transform: scale(1); margin: 10px 0; }
+    .m-link:nth-child(2) .m-card { transform: scale(1); margin: 10px 0; }
     .m-grid { grid-template-columns: 1fr; }
 }
 </style>
@@ -169,57 +175,63 @@ footer {
     </header>
 
     <div class="extra-services">
-        <div class="s-tag">Basic Website <span>₹999+</span></div>
-        <div class="s-tag">Advanced Website <span>₹1999+</span></div>
-        <div class="s-tag">Premium Website <span>₹4999+</span></div>
+        <a href="https://instagram.com/deepaksonihr21" class="s-tag">Basic Website <span>₹999+</span></a>
+        <a href="https://instagram.com/deepaksonihr21" class="s-tag">Advanced Website <span>₹1999+</span></a>
+        <a href="https://instagram.com/deepaksonihr21" class="s-tag">Premium Website <span>₹4999+</span></a>
     </div>
 
     <div class="extra-services" style="margin-top: -10px; opacity: 0.7;">
-        <div class="s-tag">Domain Setup <span>₹299</span></div>
-        <div class="s-tag">Custom Connection <span>FREE</span></div>
+        <a href="https://instagram.com/deepaksonihr21" class="s-tag">Domain Setup <span>₹299</span></a>
+        <a href="https://instagram.com/deepaksonihr21" class="s-tag">Custom Connection <span>FREE</span></a>
     </div>
 
     <div class="section-label">Maintenance Plans</div>
 
     <div class="m-grid">
-        <div class="m-card">
-            <h2>🔹 Basic Site</h2>
-            <ul class="price-list">
-                <li>Monthly <span>₹199 – ₹299</span></li>
-                <li>3 Months <span>₹499 – ₹799</span></li>
-                <li>6 Months <span>₹899 – ₹1499</span></li>
-                <li>Yearly <span>₹1799 – ₹2999</span></li>
-            </ul>
-            <div class="includes">
-                Minor edits, support, uptime check
+        <a href="https://instagram.com/deepaksonihr21" class="m-link">
+            <div class="m-card">
+                <h2>🔹 Basic Site</h2>
+                <ul class="price-list">
+                    <li>Monthly <span>₹199 – ₹299</span></li>
+                    <li>3 Months <span>₹499 – ₹799</span></li>
+                    <li>6 Months <span>₹899 – ₹1499</span></li>
+                    <li>Yearly <span>₹1799 – ₹2999</span></li>
+                </ul>
+                <div class="includes">
+                    Minor edits, support, uptime check
+                </div>
             </div>
-        </div>
+        </a>
 
-        <div class="m-card">
-            <h2 style="color:#fff;">🔥 Advanced Site <br><span style="font-size: 0.7rem; color: orange;">(MOST POPULAR)</span></h2>
-            <ul class="price-list">
-                <li>Monthly <span>₹399 – ₹699</span></li>
-                <li>3 Months <span>₹999 – ₹1799</span></li>
-                <li>6 Months <span>₹1999 – ₹3499</span></li>
-                <li>Yearly <span>₹3999 – ₹6999</span></li>
-            </ul>
-            <div class="includes">
-                Basic + updates, performance check, 1–2 new sections
+        <a href="https://instagram.com/deepaksonihr21" class="m-link">
+            <div class="m-card">
+                <h2 style="color:#fff;">🔥 Advanced Site <br><span style="font-size: 0.7rem; color: orange;">(MOST POPULAR)</span></h2>
+                <ul class="price-list">
+                    <li>Monthly <span>₹399 – ₹699</span></li>
+                    <li>3 Months <span>₹999 – ₹1799</span></li>
+                    <li>6 Months <span>₹1999 – ₹3499</span></li>
+                    <li>Yearly <span>₹3999 – ₹6999</span></li>
+                </ul>
+                <div class="includes">
+                    Basic + updates, performance check, 1–2 new sections
+                </div>
             </div>
-        </div>
+        </a>
 
-        <div class="m-card">
-            <h2>🔹 Premium Site</h2>
-            <ul class="price-list">
-                <li>Monthly <span>₹999 – ₹1999</span></li>
-                <li>3 Months <span>₹2499 – ₹4999</span></li>
-                <li>6 Months <span>₹4999 – ₹8999</span></li>
-                <li>Yearly <span>₹9999 – ₹17999</span></li>
-            </ul>
-            <div class="includes">
-                Priority support ⚡, unlimited edits, advanced SEO, analytics & conversion optimization
+        <a href="https://instagram.com/deepaksonihr21" class="m-link">
+            <div class="m-card">
+                <h2>🔹 Premium Site</h2>
+                <ul class="price-list">
+                    <li>Monthly <span>₹999 – ₹1999</span></li>
+                    <li>3 Months <span>₹2499 – ₹4999</span></li>
+                    <li>6 Months <span>₹4999 – ₹8999</span></li>
+                    <li>Yearly <span>₹9999 – ₹17999</span></li>
+                </ul>
+                <div class="includes">
+                    Priority support ⚡, unlimited edits, advanced SEO, analytics & conversion optimization
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
     <p style="text-align:center; color:#555; font-size:0.85rem; margin-top: 10px;">
